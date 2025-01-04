@@ -1,0 +1,22 @@
+@font-face { 
+    font-family: 'small'; 
+    src: url('agbalumo-regular-webfont.woff2') format('woff2'),
+        url('agbalumo-regular-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'big'; 
+    src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+        url('alexbrush-regular-webfont.woff') format('woff');
+}
+.textlogo{
+    color:#9E1A95;
+    font-family: "big";
+    font-size: 64px;
+    font-weight: bold;
+}
+.textlogin{
+    color:#E0E8FF;
+    font-family: "big";
+    font-size: 54px;
+    font-weight: normal;
+}

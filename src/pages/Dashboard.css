@@ -1,0 +1,316 @@
+.dashboard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0px 200px;
+}
+.textbig{
+    color:#6551AD;
+    font-family: "small";
+    font-size: 20px;
+    font-weight: normal;
+}
+.dashboard .overviews{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.dashboard .view.selected{
+    width: 350px;
+    transition: all 1s ease;
+}
+.dashboard .view{
+    position: relative;
+    width: 200px;
+    margin: 0px 20px;
+    height: 125px;
+    border-radius:24px;
+    background: linear-gradient(45deg,#437AFA, #2F22DA );
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    transition: all 1s ease;
+}
+.dashboard .view.selected .cloud{
+    opacity: 1;
+    transition: all 0.5s ease 0.5s;
+}
+.dashboard .view .cloud{
+    opacity: 0;
+    height: 15px;
+    background-image: url("/cloud.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+}
+.dashboard .view .icon{
+    position: relative;
+    width: 18px;
+    height: 18px;
+    top: 20px;
+    left: 20px;
+}
+.dashboard .view .title{
+    position: relative;
+    top: -23px;
+    left: 50px;
+    font-family: "small";
+    font-size: 16px;
+    color: white;
+}
+.dashboard .view .value{
+    position: relative;
+    bottom: 75px;
+    left: 40px;
+    font-family: "small";
+    font-size: 48px;
+    color: white;
+}
+.dashboard .view.selected #cloud1{
+    position: absolute;
+    width: 75px;
+    bottom: 85px;
+    right:20px;
+}
+.dashboard .view.selected #cloud2{
+    position: absolute;
+    width: 78px;
+    bottom: 30px;
+    right: 18px;
+    transform: scaleY(-1);
+}
+.dashboard .view #cloud1{
+    position: absolute;
+    width: 75px;
+    bottom: 85px;
+    right:-20px;
+}
+.dashboard .view #cloud2{
+    position: absolute;
+    width: 78px;
+    bottom: 30px;
+    right: -18px;
+    transform: scaleY(-1);
+}
+.dashboard .view #cloud2 p{
+    position: relative;
+    opacity: 1;
+    top: -6px;
+    left: 10px;
+    transform: scaleY(-1);
+}
+.dashboard .view #cloud1 p{
+    position: relative;
+    opacity: 1;
+    top: -6px;
+    left: 10px;
+}
+.dashboard .view .cloud p{
+    color:#E0E8FF;
+    font-family: "small";
+    font-size: 8px;
+    font-weight: normal;
+}
+.dashboard .view .date{
+    position: absolute;
+    bottom:-12.5px;
+    right:-20px ;
+    padding:0px 10px;
+    box-sizing: border-box;
+    width: 100px;
+    height: 25px;
+    background-color: #E0E8FF;
+    border-radius: 18px;
+}
+.dashboard .view .date p{
+    color: #2F22DA;
+    font-family: "small";
+    font-size: 8px;
+    font-weight: normal;
+}
+.dashboard .transactions{
+    height: 500px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .transaction{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 125px;
+    border-radius: 24px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    overflow: hidden;
+    padding-top: 10px;
+    transition: all 1s ease;
+    margin: 20px 0px;
+}
+.dashboard .transaction.selected{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 180px;
+    border-radius: 24px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    overflow: hidden;
+    padding-top: 10px;
+    transition: all 1s ease;
+}
+.dashboard .transaction  .curve{
+    position: absolute;
+    top: 35px;
+    width: 600px;
+    height: 100px;
+    border-radius: 0px;
+    background-image: url("/curve.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.dashboard .transaction  .turn{
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 350px;
+    height: 200px;
+    border-radius: 24px;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.5 154.5"%3E%3Cpath d="M0.5 -10.5L315 -36L357.5 154.5C357.5 154.5 294 69.5 228 42.5C162 15.5 0.5 -10.5 0.5 -10.5Z" fill="%23B11761" /%3E%3C/svg%3E') no-repeat center;
+} 
+.dashboard .transaction  .time{
+    position: absolute;
+    top: 40px;
+    right: 140px;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    border:solid 6px #A29CD6;
+    background-color: #A29CD6;
+}
+.dashboard .transaction  .caty{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+}
+.dashboard .transaction  .date{
+    position: absolute;
+    top: 70px;
+    right: 120px;
+    color: white;
+    font-family: "small";
+    font-weight: 200;
+    font-size: 16px;
+}
+.dashboard .transaction  .category{
+    position: absolute;
+    top: 0px;
+    right: 35px;
+    color: white;
+    font-family: "small";
+    font-weight: 200;
+    font-size: 14px;
+}
+.dashboard .transaction  .type,.dashboard .transaction  .note{
+    margin: 5px 25px;
+    color: #6551AD;
+    font-family: "small";
+    font-weight: 200;
+    font-size: 16px;
+}
+.dashboard .transaction  .value{
+    color: #2A2D76;
+    font-family: "small";
+    font-weight: 200;
+    font-size: 20px;
+    padding: 0px;
+    margin: 5px 25px;
+}
+.dashboard .transaction  .text{
+    position: relative;
+    width: 600px;
+    height: 120px;
+    bottom:-10px;
+    margin: 0px;
+    background-color: #A29CD6;
+    padding: 0px 25px;
+    box-sizing: border-box;
+    color: white;
+    font-family: "small";
+    font-weight: 200;
+    font-size: 14px;
+}
+.dashboard .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dashboard .colunm{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .categories{
+    display: grid;               
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 15px;           
+    padding: 20px;  
+}
+.dashboard .categories .category{
+    width: 80px;
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 12px;
+    background-color: #6551AD40;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 10s ease;
+}
+.dashboard .categories .category.selected{
+    width: 80px;
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 12px;
+    background-color: #6551AD40;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    transition: all 10s ease;
+}
+.dashboard .categories .category .color{
+    width: 30px;
+    height: 20px;
+    border-radius: 12px;
+    background-color: #6551AD40;
+}
+.dashboard .categories .category .name{
+    box-sizing: border-box;
+    color: white;
+    font-family: "small";
+    font-weight: 200;
+    margin:0px 10px;
+    font-size: 10px;
+}
+ .chart{
+    position: relative;
+    width: 550px;
+    height: 220px;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    border-radius: 24px;
+    margin-bottom:30px ;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
