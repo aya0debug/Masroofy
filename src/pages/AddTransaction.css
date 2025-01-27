@@ -1,0 +1,547 @@
+
+.addtransaction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    z-index: 2;
+    box-shadow: 0px 0px 40px 0px #6551AD80;
+     justify-content: center;
+}
+.addtransaction .title {
+    color:#6551AD;
+    font-family: "small";
+    font-size: 20px;
+    font-weight: normal;
+}
+.addtransaction .container{
+    position: relative;
+    border-radius: 24px;
+    background-color: #e0def2;
+    box-shadow: 0px 0px 40px 0px #6551AD80;
+    width: 500px;
+    min-height: 250px;
+    box-sizing: border-box;
+    padding: 15px 25px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+.addtransaction .search{
+    position: relative;
+    border-radius: 24px;
+    box-shadow: 0px 0px 40px 0px #6551AD80;
+    width: 500px;
+    height: 80px;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    overflow: hidden;
+    margin-top: 20px;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+}
+.addtransaction .container .search{
+    position: relative;
+    border-radius: 24px;
+    box-shadow: 0px 0px 40px 0px #201c2c00;
+    box-sizing: border-box;
+    width: 450px;
+    height: 50px;
+    margin-top: 0px;
+    padding: 0px 0px;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+}
+.addtransaction .inputgroup,.addtransaction .bar{
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    border: solid 0.5px #A29CD6;
+    background-color: #A29CD6;
+    border-radius: 16px;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    margin-top: 0px ;
+    transition: all 0.25s ease;
+}
+.addtransaction .inputgroup.selected,.addtransaction .inputgroup:hover,.addtransaction  .bar:hover{
+    width: 300px;
+    height: 30px;
+    background-color: #A29CD680;
+    border-radius: 16px;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    margin-top: 13px ;
+    transition: all 0.25s ease;
+}
+.addtransaction .inputgroup.selected input,.addtransaction .inputgroup:hover input,.addtransaction  .bar:hover input{
+    display: block; /* Make the input behave like a block element */
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.addtransaction .inputgroup.selected input::placeholder,.addtransaction .inputgroup:hover input::placeholder,.addtransaction .bar:hover input::placeholder{
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.addtransaction .inputgroup input,.addtransaction .bar input{
+    display: block; /* Make the input behave like a block element */
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: white;
+    transition: all 0.5s ease;
+}
+.addtransaction .inputgroup input::placeholder,.addtransaction  .bar input::placeholder{
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #E0E8FF;
+    transition: all 0.5s ease;
+}
+.addtransaction .inputgroup .icon,.addtransaction  .bar .icon{
+    position: relative;
+    top: -3px;
+    margin: 0px 10px;
+    width: 18px;
+    height: 18px;
+    border: none;
+}
+.addtransaction .inputgroup,.addtransaction .bar{
+    width: 300px;
+    min-height: 30px;
+    display: flex;
+    flex-direction: row;
+    border: solid 0.5px #A29CD6;
+    background-color: #A29CD6;
+    border-radius: 16px;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    margin-top: 0px ;
+    transition: all 0.25s ease;
+}
+.addtransaction .erea{
+    width: 300px;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    border: solid 0.5px #A29CD6;
+    background-color: #A29CD6;
+    border-radius: 16px;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    margin-top: 0px ;
+    transition: all 0.25s ease;
+}
+.addtransaction .inputgroup.selected,.addtransaction .inputgroup:hover,.addtransaction  .bar:hover{
+    width: 300px;
+    height: 30px;
+    background-color: #A29CD680;
+    border-radius: 16px;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    margin-top: 13px ;
+    transition: all 0.25s ease;
+}
+.addtransaction  .erea:hover textarea{
+    display: block; /* Make the input behave like a block element */
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.addtransaction .erea:hover textarea::placeholder{
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.addtransaction .erea  textarea{
+    display: block; /* Make the input behave like a block element */
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: white;
+    transition: all 0.5s ease;
+}
+.addtransaction  .erea textarea::placeholder{
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #E0E8FF;
+    transition: all 0.5s ease;
+}
+.addtransaction .cancel button{
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; 
+    font: "small";
+    font-size: 13px;
+    color: #9E1A95; 
+}
+.addtransaction .container .row > p{
+        position: relative;
+        border: none; /* Removes the border */
+        outline: none; /* Removes the outline (focus border) */
+        background: transparent; /* Removes the background */
+        padding: 0; 
+        font: "small";
+        margin-top: 25px;
+        font-size: 13px;
+        color: #9E1A95; 
+        display: flex;
+        flex-direction: row;
+        align-items: center ;
+}
+.addtransaction .search button{
+    position: relative;
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; 
+    font: "small";
+    font-size: 13px;
+    color: #9E1A95; 
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+}
+.addtransaction .search button .icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.addtransaction .container .subtitle{
+    background-color: transparent;
+    border: none;
+    font-family: "small";
+    font-size: 13px;
+    color: #A29CD6;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 0px 0px #6551AD00;
+}
+.addtransaction .container .colors{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 20px;
+    left: 0px;
+}
+.addtransaction .container .color{
+    width: 30px;
+    height: 20px;
+    border-radius: 12px;
+    margin: 0px 5px;
+}
+.addtransaction .container .color{
+    width: 30px;
+    height: 20px;
+    border-radius: 12px;
+    margin: 0px 5px;
+    border:solid 1px #786da100;
+    transition: all 0.5s ease;
+}
+.addtransaction .container .color.selected{
+    width: 30px;
+    height: 20px;
+    border-radius: 12px;
+    margin: 0px 10px;
+    border:solid 1px #6551AD80;
+    transition: all 0.5s ease;
+}
+.addtransaction .container .subtitle.icon{
+    position: relative;
+    left: 80px;
+    top: 10px;
+}
+.addtransaction .container .subtitle.color{
+    position: relative;
+    left: -20px;
+    top: 5px;
+}
+.addtransaction .container .icons{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -10px;
+    left: 120px;
+}
+.addtransaction .container .caty{
+    opacity: 1;
+    z-index: inherit;
+    width: 36px;
+    height: 36px;
+    border-radius: 24px;
+    margin: 0px -5px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #A29CD6;
+    transition: all 0.5s ease;
+}
+.addtransaction .container .caty.selected{
+    opacity: 1;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    border-radius: 24px;
+    margin: 0px -5px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #A29CD6;
+    border: #6551AD 1px solid;
+    transition: all 0.5s ease;
+}
+.addtransaction .container .type{
+    width: 120px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    border: solid 0.5px #A29CD6;
+    background-color: #A29CD6;
+    border-radius: 16px;
+    margin: 0px 10px;
+    padding: -0px 10px;
+    box-sizing: border-box;
+    margin-top: 10px ;
+    transition: all 0.25s ease;
+}
+.addtransaction .container .type.selected{
+    width: 120px;
+    height: 30px;
+    background-color: #A29CD680;
+    border-radius: 16px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    margin-top: 10px ;
+    transition: all 0.25s ease;
+}
+.addtransaction .container .type.selected p{
+    position: relative;
+    top: -8px;
+    display: block; /* Make the input behave like a block element */
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.addtransaction .container .type p{
+    position: relative;
+    top: -8px;
+    display: block; /* Make the input behave like a block element */
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #E0E8FF;
+    transition: all 0.5s ease;
+}
+
+.addtransaction .container .type .icon{
+    position: relative;
+    top: 3px;
+    margin: 0px 10px;
+    width: 18px;
+    height: 18px;
+    border: none;
+}
+.addtransaction .container .row{
+    position: relative;
+    height: 30px;
+    top: -10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.addtransaction .cates{
+    display: grid;               
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 15px;           
+    padding: 0px;  
+}
+.addtransaction .container .cates .category{
+    width: 80px;
+    height: 20px;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+    border-radius: 24px;
+    background-color: #6551AD40;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.addtransaction .container .cates .category.selected{
+    width: 90px;
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 12px;
+    background-color: #6551AD40;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.addtransaction .container .cates .category .color{
+    margin-right: 10px;
+    margin-left: 0px;
+    width: 30px;
+    height: 20px;
+    border-radius: 24px;
+    background-color: #6551AD40;
+}
+.addtransaction .container .cates .category.selected .color{
+    margin-right: 0px;
+    margin-left: 10px;
+    width: 30px;
+    height: 20px;
+    border-radius: 24px;
+    background-color: #6551AD40;
+}
+.addtransaction .container .cates .category .name{
+    box-sizing: border-box;
+    color: white;
+    font-family: "small";
+    font-weight: 200;
+    margin:0px 0px;
+    font-size: 10px;
+}
+.addtransaction .container .subtitle{
+    position: relative;
+    margin: 0px;
+    margin-top: 5px;
+}
+.addtransaction .container .date{
+    width: 60px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    border: solid 0.5px #A29CD6;
+    background-color: #A29CD6;
+    border-radius: 16px;
+    padding: 8px 5px;
+    box-sizing: border-box;
+    margin: 0px 3px;
+    margin-top: 10px ;
+    transition: all 0.25s ease;
+}
+.addtransaction .container .date.selected,.addtransaction .container .date:hover{
+    width: 60px;
+    height: 30px;
+    background-color: #A29CD680;
+    border-radius: 16px;
+    padding: 8px 5px;
+    box-sizing: border-box;
+    margin-top: 13px ;
+    transition: all 0.25s ease;
+}
+.addtransaction .container .date.selected input,.addtransaction .container .date:hover input{
+    display: block; /* Make the input behave like a block element */
+    margin: 0px; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.addtransaction .container .date.selected input::placeholder,.addtransaction .container .date:hover input::placeholder{
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.addtransaction .container .date input{
+    margin: 0px;
+    display: block; /* Make the input behave like a block element */
+/* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: white;
+    transition: all 0.5s ease;
+}
+.addtransaction .container .date input::placeholder{
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #E0E8FF;
+    transition: all 0.5s ease;
+}
+.addtransaction .container .date .icon{
+    position: relative;
+    top: -3px;
+    margin: 0px 5px;
+    width: 18px;
+    height: 18px;
+    border: none;
+}
+.addtransaction .wave2{
+    position: absolute;
+    height: 125px;
+    width: 225px;
+    right: 0px;
+    transform: scale(-1);
+    bottom: 0px;
+    background-image: url("/wave5.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+.addtransaction  .cancel {
+    position: absolute;
+    top: 25px;
+    right: 35px; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; 
+    font: "small";
+    font-size: 13px;
+    color: #9E1A95; 
+}

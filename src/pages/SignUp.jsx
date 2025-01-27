@@ -5,10 +5,10 @@ import email from "../assets/Email.svg"
 import { useState } from 'react';
 import "./Login.css"
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../state/actions/authActions';
-import { useNavigate } from 'react-router-dom';
+import { signup } from '../state/actions/authActions';
+import { Navigate, useNavigate } from 'react-router-dom';
 
-function Login() {
+function SignUp() {
   return (
     <div className='login'>
     <div className='background'>
@@ -19,7 +19,7 @@ function Login() {
         <div></div>
       </div>
       <div className='purple'>
-        <LoginForm/>
+        <SignUpForm/>
       </div>
     </div>
     <div className='image'>
@@ -30,25 +30,24 @@ function Login() {
   )
 }
 
-export default Login
+export default SignUp
 
 
 
-const LoginForm = () => {
+const SignUpForm = () => {
   const navigate=useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [usernameclass, setUsernameclass] = useState('inputgroup');
   const [passwordclass, setPasswordclass] = useState('inputgroup');
-  const dispatch = useDispatch();
-   const error = useSelector((state) => state.auth.error); 
-   const user = useSelector((state) => state.auth.user);
+  const dispatch = useDispatch(); 
+  const error = useSelector((state) => state.auth.error);
   const handleSubmit = (event) => {
     event.preventDefault();
     setUsernameclass("inputgroup");
     setPasswordclass("inputgroup");
-    dispatch(login({ email, password }));
-    navigate('/');
+    dispatch(signup({ email, password }));
+    Navigate('/login');
   };
   const handleClick = (event) => {
     if(usernameclass=="inputgroup" && passwordclass=="inputgroup selected"){
@@ -62,7 +61,7 @@ const LoginForm = () => {
 
   return (
     <div >
-      <p className='textlogin'>Login</p>
+      <p className='textlogin'>Sign Up</p>
       <form onSubmit={handleSubmit}>
         <div className={usernameclass}>
           <input
@@ -91,7 +90,7 @@ const LoginForm = () => {
         </div>
         
         <div className="buttongroup">
-          <button type="submit">Login</button>
+          <button type="submit">Sign Up</button>
         </div>
       </form>
       {error && <p>{error}</p>}

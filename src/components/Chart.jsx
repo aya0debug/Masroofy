@@ -101,7 +101,10 @@ const ExpensesVsIncomeChart = () => {
   
 
   return (
+    <div className="line">
       <Bar data={data} options={options} />
+    </div>
+    
   );
 };
 

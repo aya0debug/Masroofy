@@ -1,9 +1,12 @@
 .dashboard{
+    position: relative;
+    top: -15px;
     width: 100%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 0px 200px;
+    padding: 0px 180px;
+    overflow: hidden;
 }
 .textbig{
     color:#6551AD;
@@ -130,8 +133,10 @@
     font-weight: normal;
 }
 .dashboard .transactions{
-    height: 500px;
-    width: 600px;
+    height: 580px;
+    width: 700px;
+    top: 0px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
 }
@@ -147,7 +152,8 @@
     overflow: hidden;
     padding-top: 10px;
     transition: all 1s ease;
-    margin: 20px 0px;
+    margin: 20px 20px;
+    flex-shrink: 0;
 }
 .dashboard .transaction.selected{
     position: relative;
@@ -202,7 +208,7 @@
 .dashboard .transaction  .date{
     position: absolute;
     top: 70px;
-    right: 120px;
+    right: 90px;
     color: white;
     font-family: "small";
     font-weight: 200;
@@ -255,6 +261,19 @@
     position: relative;
     display: flex;
     flex-direction: column;
+}
+.dashboard .transs{
+    position: absolute;
+    display: flex;
+    left: 0px;
+    top: -20px;
+    flex-direction: column;
+    padding: 10px 10px;
+    min-height: 500px;
+    margin: 0px;
+    width:640px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .dashboard .categories{
     display: grid;               
@@ -313,4 +332,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.tooltip{
+    position: absolute;
+    background-color: #E0E8FF;
+    padding: 5px 10px;
+    border-radius: 8px;
 }

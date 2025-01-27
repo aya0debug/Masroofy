@@ -22,7 +22,7 @@
     background-color: #E0E8FF;
     padding-left: 300px;
     box-sizing: border-box;
-
+    overflow: hidden;
 }
 .home .notification{
     position: absolute;

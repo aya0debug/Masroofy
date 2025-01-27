@@ -1,0 +1,505 @@
+.categories{
+    position: relative;
+    top: -15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0px 180px;
+    overflow: hidden;
+}
+.categories .list{
+    width: 650px;
+    top: -25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.categories .list .bar{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;  
+}
+.categories .title {
+    color:#6551AD;
+    font-family: "small";
+    font-size: 20px;
+    font-weight: normal;
+}
+.categories .list .bar button{
+    background-color: transparent;
+    border: none;
+    font-family: "small";
+    font-size: 13px;
+    color: #A29CD6;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 0px 0px #6551AD00;
+    transition: all 0.5s ease;
+}
+.categories .list .bar button.selected{
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    color: #9E1A95;
+    transition: all 0.5s ease;
+}
+.categories .list .bar .expense{
+    position: relative;
+    margin-left: 300px;
+}
+.categories .list .category{
+    position: relative;
+    width: 600px;
+    margin: 20px;
+    height: 125px;
+    border-radius:24px;
+    background: linear-gradient(45deg,#437AFA, #2F22DA );
+    box-shadow: 0px 0px 40px 0px #6551AD80;
+    overflow: hidden;
+}
+.categories .list .category .cloud{
+    opacity: 1;
+    height: 15px;
+    background-image: url("/cloud.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.categories .list .category .icon{
+    position: relative;
+    width: 18px;
+    height: 18px;
+    top: 20px;
+    left: 20px;
+}
+.categories .list .category .title{
+    position: relative;
+    top: -23px;
+    left: 50px;
+    font-family: "small";
+    font-size: 16px;
+    color: white;
+}
+.categories .list .category .value1{
+    position: absolute;
+    bottom: -25px;
+    left: 100px;
+    font-family: "small";
+    font-size: 32px;
+    color: white;
+}
+.categories .list .category .value2{
+    position: absolute;
+    top: 0px;
+    right: 40px;
+    font-family: "small";
+    font-size: 32px;
+    color: white;
+}
+.categories .list .category .subtitle1{
+    position: absolute;
+    bottom: 40px;
+    left: 65px;
+    color:#E0E8FF;
+    font-family: "small";
+    font-size: 8px;
+    font-weight: normal;
+}
+.categories .list .category .subtitle2{
+    position: absolute;
+    top: 15px;
+    right: 80px;
+    color:#E0E8FF;
+    font-family: "small";
+    font-size: 8px;
+    font-weight: normal;
+}
+.categories .list .category #cloud1{
+    position: absolute;
+    width: 75px;
+    bottom: 85px;
+    left:180px;
+    transform: scaleX(-1);
+}
+.categories .list .category #cloud2{
+    position: absolute;
+    width: 78px;
+    bottom: 30px;
+    right: 180px;
+    transform: scaleY(-1);
+}
+.categories .list .category #cloud2 p{
+    position: relative;
+    opacity: 1;
+    top: -6px;
+    left: 10px;
+    transform: scaleY(-1);
+}
+.categories .list .category #cloud1 p{
+    position: relative;
+    opacity: 1;
+    top: -6px;
+    left: -10px;
+    transform: scaleX(-1);
+}
+.categories .list .category .cloud p{
+    color:#E0E8FF;
+    font-family: "small";
+    font-size: 8px;
+    font-weight: normal;
+}
+.categories .list .category .edit{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color:#E0E8FF;
+    font-family: "small";
+    font-size: 8px;
+    padding: 10px;
+    font-weight: normal;
+    border: none;
+    background-color: transparent;
+}
+.categories .list .category .delete{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color:#E0E8FF;
+    font-family: "small";
+    font-size: 8px;
+    font-weight: normal;
+    border: none;
+    background-color: transparent;
+}
+.categories .list .category .wavea1{
+    opacity: 0.25;
+    position: absolute;
+    height: 80px;
+    width: 390px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("/wave1.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.categories .list .category .wavea2{
+    opacity: 0.25;
+    position: absolute;
+    height: 80px;
+    width: 390px;
+    bottom: -10px;
+    left: -10px;
+    background-image: url("/wave1.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.categories .list .category .wavea3{
+    opacity: 0.25;
+    position: absolute;
+    height: 80px;
+    width: 390px;
+    bottom: -35px;
+    left: -125px;
+    background-image: url("/wave1.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.categories .list .category .waveb1{
+    opacity: 0.25;
+    position: absolute;
+    height: 125px;
+    width: 255px;
+    top: 0px;
+    right: 0px;
+    background-image: url("/wave2.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.categories  .list .category .waveb2{
+    opacity: 0.25;
+    position: absolute;
+    height: 125px;
+    width: 255px;
+    top: 0px;
+    right: 0px;
+    background-image: url("/wave3.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.categories .list .category .waveb3{
+    opacity: 0.25;
+    position: absolute;
+    height: 125px;
+    width: 255px;
+    top: -70px;
+    right: -30px;
+    background-image: url("/wave3.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.categories .column{
+    padding: 10px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+.categories .form{
+    position: relative;
+    border-radius: 24px;
+    box-shadow: 0px 0px 40px 0px #6551AD80;
+    width: 500px;
+    height: 250px;
+    box-sizing: border-box;
+    padding: 15px 25px;
+    overflow: hidden;
+}
+.categories .image{
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    margin: 100px 0px;
+    padding: 0px 200px;
+    box-sizing: border-box;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.categories .image img{
+    position: relative;
+    height: 600px;
+    width: 600px;
+    top: -100px;
+    left: -400px; 
+}
+.categories .inputgroup{
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    border: solid 0.5px #A29CD6;
+    background-color: #A29CD6;
+    border-radius: 16px;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    margin-top: 10px ;
+    transition: all 0.25s ease;
+}
+.categories .inputgroup.selected,.categories .inputgroup:hover{
+    width: 300px;
+    height: 30px;
+    background-color: #A29CD680;
+    border-radius: 16px;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    margin-top: 13px ;
+    transition: all 0.25s ease;
+}
+.categories .inputgroup.selected input,.categories .inputgroup:hover input{
+    display: block; /* Make the input behave like a block element */
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.categories .inputgroup.selected input::placeholder,.categories .inputgroup:hover input::placeholder{
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.categories .inputgroup input{
+    display: block; /* Make the input behave like a block element */
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: white;
+    transition: all 0.5s ease;
+}
+.categories .inputgroup input::placeholder{
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #E0E8FF;
+    transition: all 0.5s ease;
+}
+.categories .inputgroup .icon{
+    position: relative;
+    top: -3px;
+    margin: 0px 10px;
+    width: 18px;
+    height: 18px;
+    border: none;
+}
+.categories .add{
+    position: absolute;
+    border-radius: 24px;
+    background-color:transparent;
+    width: 90px;
+    height: 40px;
+    bottom: 10px;
+    left: 5px;
+    margin: 5px auto;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+    color: #437AFA;
+}
+.categories .add button{
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; 
+    font: "small";
+    font-size: 13px;
+    color: #437AFA; 
+}
+.categories .cancel{
+    position: absolute;
+    border-radius: 24px;
+    background-color:transparent;
+    width: 90px;
+    height: 40px;
+    top: 5px;
+    right: 5px;
+    margin: 10px auto;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+    color: #437AFA;
+}
+.categories .cancel button{
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; 
+    font: "small";
+    font-size: 13px;
+    color: #9E1A95; 
+}
+.categories .form .subtitle{
+    background-color: transparent;
+    border: none;
+    font-family: "small";
+    font-size: 13px;
+    color: #A29CD6;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 0px 0px #6551AD00;
+}
+.categories .form .colors{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 20px;
+    left: 0px;
+}
+.categories .form .color{
+    width: 30px;
+    height: 20px;
+    border-radius: 12px;
+    margin: 0px 5px;
+}
+.categories .form .color{
+    width: 30px;
+    height: 20px;
+    border-radius: 12px;
+    margin: 0px 5px;
+    border:solid 1px #786da100;
+    transition: all 0.5s ease;
+}
+.categories .form .color.selected{
+    width: 30px;
+    height: 20px;
+    border-radius: 12px;
+    margin: 0px 10px;
+    border:solid 1px #6551AD80;
+    transition: all 0.5s ease;
+}
+.categories .form .subtitle.icon{
+    position: relative;
+    left: 80px;
+    top: 10px;
+}
+.categories .form .subtitle.color{
+    position: relative;
+    left: -20px;
+    top: 5px;
+}
+.categories .form .icons{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -10px;
+    left: 120px;
+}
+.categories .form .caty{
+    opacity: 1;
+    z-index: inherit;
+    width: 36px;
+    height: 36px;
+    border-radius: 24px;
+    margin: 0px -5px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #A29CD6;
+    transition: all 0.5s ease;
+}
+.categories .form .caty.selected{
+    opacity: 1;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    border-radius: 24px;
+    margin: 0px -5px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #A29CD6;
+    border: #6551AD 1px solid;
+    transition: all 0.5s ease;
+}
+.categories .form .wave1{
+    position: absolute;
+    height: 80px;
+    width: 200px;
+    left: 0px;
+    bottom: 0px;
+    background-image: url("/wave4.svg");
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.categories .form .wave2{
+    position: absolute;
+    height: 100px;
+    width: 180px;
+    left: 0px;
+    top: 0px;
+    background-image: url("/wave5.svg");
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+

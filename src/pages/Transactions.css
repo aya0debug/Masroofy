@@ -1,0 +1,673 @@
+.transactions{
+    position: relative;
+    top: -15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0px 180px;
+    overflow: hidden;
+}
+.transactions .list{
+    width: 650px;
+    top: -25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.transactions .list .bar{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;  
+}
+.transactions .title {
+    color:#6551AD;
+    font-family: "small";
+    font-size: 20px;
+    font-weight: normal;
+}
+.transactions .list .bar button{
+    background-color: transparent;
+    border: none;
+    font-family: "small";
+    font-size: 13px;
+    color: #A29CD6;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 0px 0px #6551AD00;
+    transition: all 0.5s ease;
+}
+.transactions .list .bar button.selected{
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    color: #9E1A95;
+    transition: all 0.5s ease;
+}
+.transactions .list .bar .expense{
+    position: relative;
+    margin-left: 300px;
+}
+.transactions .transaction{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 125px;
+    border-radius: 24px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    overflow: hidden;
+    padding-top: 10px;
+    transition: all 1s ease;
+    margin: 20px 20px;
+    flex-shrink: 0;
+}
+.transactions .transaction.selected{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 180px;
+    border-radius: 24px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    overflow: hidden;
+    padding-top: 10px;
+    transition: all 1s ease;
+}
+.transactions .transaction  .curve{
+    position: absolute;
+    top: 35px;
+    width: 600px;
+    height: 100px;
+    border-radius: 0px;
+    background-image: url("/curve.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.transactions .transaction  .turn{
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 350px;
+    height: 200px;
+    border-radius: 24px;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.5 154.5"%3E%3Cpath d="M0.5 -10.5L315 -36L357.5 154.5C357.5 154.5 294 69.5 228 42.5C162 15.5 0.5 -10.5 0.5 -10.5Z" fill="%23B11761" /%3E%3C/svg%3E') no-repeat center;
+} 
+.transactions .transaction  .time{
+    position: absolute;
+    top: 40px;
+    right: 140px;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    border:solid 6px #A29CD6;
+    background-color: #A29CD6;
+}
+.transactions .transaction  .caty{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+}
+.transactions .transaction  .date{
+    position: absolute;
+    top: 70px;
+    right: 90px;
+    color: white;
+    font-family: "small";
+    font-weight: 200;
+    font-size: 16px;
+}
+.transactions .transaction  .category{
+    position: absolute;
+    top: 0px;
+    right: 35px;
+    color: white;
+    font-family: "small";
+    font-weight: 200;
+    font-size: 14px;
+}
+.transactions .transaction  .type,.transactions .transaction  .note{
+    margin: 5px 25px;
+    color: #6551AD;
+    font-family: "small";
+    font-weight: 200;
+    font-size: 16px;
+}
+.transactions .transaction  .value{
+    color: #2A2D76;
+    font-family: "small";
+    font-weight: 200;
+    font-size: 20px;
+    padding: 0px;
+    margin: 5px 25px;
+}
+.transactions .transaction  .text{
+    position: relative;
+    width: 600px;
+    height: 120px;
+    bottom:-10px;
+    margin: 0px;
+    background-color: #A29CD6;
+    padding: 0px 25px;
+    box-sizing: border-box;
+    color: white;
+    font-family: "small";
+    font-weight: 200;
+    font-size: 14px;
+}
+.transactions .transaction  .edit{
+    position: absolute;
+    bottom: -15px;
+    right: 35px;
+    color: #f5efff;
+    font: "small";
+    font-size: 13px;
+    border: none;
+    background-color: transparent;
+    transition: all 0.5s ease ;
+}
+.transactions .transaction  .delete{
+    position: absolute;
+    bottom: -15px;
+    right: 85px;
+    color: #9E1A95;
+    font: "small";
+    font-size: 13px;
+    border: none;
+    background-color: transparent;
+    transition: all 0.5s ease ;
+}
+.transactions .transaction:hover  .edit{
+    position: absolute;
+    bottom: 15px;
+    right: 35px;
+    color: #f5efff;
+    font: "small";
+    font-size: 13px;
+    border: none;
+    background-color: transparent;
+    transition: all 0.5s ease 0.5s;
+}
+.transactions .transaction:hover  .delete{
+    position: absolute;
+    bottom: 15px;
+    right: 85px;
+    color: #9E1A95;
+    font: "small";
+    font-size: 13px;
+    border: none;
+    background-color: transparent;
+    transition: all 0.5s ease 0.5s;
+}
+.transactions .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.transactions .transs{
+    position: relative;
+    display: flex;
+    top: -20px;
+    flex-direction: column;
+    padding: 10px 10px;
+    min-height: 500px;
+    width:640px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.transactions .colum{
+    position: relative;
+    padding: 8px;
+    padding-bottom: 40px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.transactions .column{
+    position: relative;
+    padding: 10px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+.transactions .container{
+    position: relative;
+    border-radius: 24px;
+    box-shadow: 0px 0px 40px 0px #6551AD80;
+    width: 500px;
+    min-height: 250px;
+    box-sizing: border-box;
+    padding: 15px 25px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+.transactions .search{
+    position: relative;
+    border-radius: 24px;
+    box-shadow: 0px 0px 40px 0px #6551AD80;
+    width: 500px;
+    height: 80px;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    overflow: hidden;
+    margin-top: 20px;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+}
+.transactions .container .search{
+    position: relative;
+    border-radius: 24px;
+    box-shadow: 0px 0px 40px 0px #201c2c00;
+    box-sizing: border-box;
+    width: 450px;
+    height: 50px;
+    margin-top: 0px;
+    padding: 0px 0px;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+}
+.transactions .inputgroup,.transactions .search .bar{
+    width: 300px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    border: solid 0.5px #A29CD6;
+    background-color: #A29CD6;
+    border-radius: 16px;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    margin-top: 10px ;
+    transition: all 0.25s ease;
+}
+.transactions .inputgroup.selected,.transactions .inputgroup:hover,.transactions .search .bar:hover{
+    width: 300px;
+    height: 30px;
+    background-color: #A29CD680;
+    border-radius: 16px;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    margin-top: 13px ;
+    transition: all 0.25s ease;
+}
+.transactions .inputgroup.selected input,.transactions .inputgroup:hover input,.transactions .search .bar:hover input{
+    display: block; /* Make the input behave like a block element */
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.transactions .inputgroup.selected input::placeholder,.transactions .inputgroup:hover input::placeholder,.transactions .search .bar:hover input::placeholder{
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.transactions .inputgroup input,.transactions .search .bar input{
+    display: block; /* Make the input behave like a block element */
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: white;
+    transition: all 0.5s ease;
+}
+.transactions .inputgroup input::placeholder,.transactions .search .bar input::placeholder{
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #E0E8FF;
+    transition: all 0.5s ease;
+}
+.transactions .inputgroup .icon,.transactions .search .bar .icon{
+    position: relative;
+    top: -3px;
+    margin: 0px 10px;
+    width: 18px;
+    height: 18px;
+    border: none;
+}
+.transactions .cancel button{
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; 
+    font: "small";
+    font-size: 13px;
+    color: #9E1A95; 
+}
+.transactions .container .row > p{
+        position: relative;
+        border: none; /* Removes the border */
+        outline: none; /* Removes the outline (focus border) */
+        background: transparent; /* Removes the background */
+        padding: 0; 
+        font: "small";
+        margin-top: 25px;
+        font-size: 13px;
+        color: #9E1A95; 
+        display: flex;
+        flex-direction: row;
+        align-items: center ;
+}
+.transactions .search button{
+    position: relative;
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; 
+    font: "small";
+    font-size: 13px;
+    color: #9E1A95; 
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+}
+.transactions .search button .icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.transactions .container .subtitle{
+    background-color: transparent;
+    border: none;
+    font-family: "small";
+    font-size: 13px;
+    color: #A29CD6;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 0px 0px #6551AD00;
+}
+.transactions .container .colors{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 20px;
+    left: 0px;
+}
+.transactions .container .color{
+    width: 30px;
+    height: 20px;
+    border-radius: 12px;
+    margin: 0px 5px;
+}
+.transactions .container .color{
+    width: 30px;
+    height: 20px;
+    border-radius: 12px;
+    margin: 0px 5px;
+    border:solid 1px #786da100;
+    transition: all 0.5s ease;
+}
+.transactions .container .color.selected{
+    width: 30px;
+    height: 20px;
+    border-radius: 12px;
+    margin: 0px 10px;
+    border:solid 1px #6551AD80;
+    transition: all 0.5s ease;
+}
+.transactions .container .subtitle.icon{
+    position: relative;
+    left: 80px;
+    top: 10px;
+}
+.transactions .container .subtitle.color{
+    position: relative;
+    left: -20px;
+    top: 5px;
+}
+.transactions .container .icons{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -10px;
+    left: 120px;
+}
+.transactions .container .caty{
+    opacity: 1;
+    z-index: inherit;
+    width: 36px;
+    height: 36px;
+    border-radius: 24px;
+    margin: 0px -5px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #A29CD6;
+    transition: all 0.5s ease;
+}
+.transactions .container .caty.selected{
+    opacity: 1;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    border-radius: 24px;
+    margin: 0px -5px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #A29CD6;
+    border: #6551AD 1px solid;
+    transition: all 0.5s ease;
+}
+.transactions .container .type{
+    width: 120px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    border: solid 0.5px #A29CD6;
+    background-color: #A29CD6;
+    border-radius: 16px;
+    margin: 0px 10px;
+    padding: -0px 10px;
+    box-sizing: border-box;
+    margin-top: 10px ;
+    transition: all 0.25s ease;
+}
+.transactions .container .type.selected{
+    width: 120px;
+    height: 30px;
+    background-color: #A29CD680;
+    border-radius: 16px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    margin-top: 10px ;
+    transition: all 0.25s ease;
+}
+.transactions .container .type.selected p{
+    position: relative;
+    top: -8px;
+    display: block; /* Make the input behave like a block element */
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.transactions .container .type p{
+    position: relative;
+    top: -8px;
+    display: block; /* Make the input behave like a block element */
+    width: 100%; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #E0E8FF;
+    transition: all 0.5s ease;
+}
+
+.transactions .container .type .icon{
+    position: relative;
+    top: 3px;
+    margin: 0px 10px;
+    width: 18px;
+    height: 18px;
+    border: none;
+}
+.transactions .container .row{
+    position: relative;
+    height: 30px;
+    top: -10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.transactions .cates{
+    position: relative;
+    display: grid;               
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 15px;           
+    padding: 0px 40px;  
+}
+.transactions .container .cates .category{
+    position: relative;
+    width: 80px;
+    height: 20px;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+    border-radius: 24px;
+    background-color: #6551AD40;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.transactions .container .cates .category.selected{
+    width: 90px;
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 12px;
+    background-color: #6551AD40;
+    box-shadow: 0px 0px 40px 0px #6551AD40;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.transactions .container .cates .category .color{
+    margin-right: 10px;
+    margin-left: 0px;
+    width: 30px;
+    height: 20px;
+    border-radius: 24px;
+    background-color: #6551AD40;
+}
+.transactions .container .cates .category.selected .color{
+    margin-right: 0px;
+    margin-left: 10px;
+    width: 30px;
+    height: 20px;
+    border-radius: 24px;
+    background-color: #6551AD40;
+}
+.transactions .container .cates .category .name{
+    box-sizing: border-box;
+    color: white;
+    font-family: "small";
+    font-weight: 200;
+    margin:0px 0px;
+    font-size: 10px;
+}
+.transactions .container .subtitle{
+    position: relative;
+    margin: 0px;
+    margin-top: 5px;
+}
+.transactions .container .date{
+    width: 60px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    border: solid 0.5px #A29CD6;
+    background-color: #A29CD6;
+    border-radius: 16px;
+    padding: 8px 5px;
+    box-sizing: border-box;
+    margin: 0px 3px;
+    margin-top: 10px ;
+    transition: all 0.25s ease;
+}
+.transactions .container .date.selected,.transactions .container .date:hover{
+    width: 60px;
+    height: 30px;
+    background-color: #A29CD680;
+    border-radius: 16px;
+    padding: 8px 5px;
+    box-sizing: border-box;
+    margin-top: 13px ;
+    transition: all 0.25s ease;
+}
+.transactions .container .date.selected input,.transactions .container .date:hover input{
+    display: block; /* Make the input behave like a block element */
+    margin: 0px; /* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.transactions .container .date.selected input::placeholder,.transactions .container .date:hover input::placeholder{
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #6551AD;
+    transition: all 0.25s ease;
+}
+.transactions .container .date input{
+    margin: 0px;
+    display: block; /* Make the input behave like a block element */
+/* Optional: to control the width */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the outline (focus border) */
+    background: transparent; /* Removes the background */
+    padding: 0; /* Removes any default padding */
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: white;
+    transition: all 0.5s ease;
+}
+.transactions .container .date input::placeholder{
+    font: "small";
+    font-size: 12px; /* Ensures the font is inherited from the parent */
+    color: #E0E8FF;
+    transition: all 0.5s ease;
+}
+.transactions .container .date .icon{
+    position: relative;
+    top: -3px;
+    margin: 0px 5px;
+    width: 18px;
+    height: 18px;
+    border: none;
+}

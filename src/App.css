@@ -20,3 +20,23 @@
     font-size: 54px;
     font-weight: normal;
 }
+
+
+  *::-webkit-scrollbar {
+    width: 8px; 
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent; 
+    border-radius: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    margin: 10px 0px;
+    background: #907fcf; /* color of the scrollbar thumb */
+    border-radius: 10px;/* adds a space around the thumb */
+  }
+
+   *::-webkit-scrollbar-thumb:hover {
+    background: #39267d; /* color of the thumb when hovered */
+  }
